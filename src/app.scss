@@ -1,7 +1,11 @@
-@import '@picocss/pico/scss/pico'; /* To import only what you need from Pico [check the documentaion](https://picocss.com/docs/customization.html) */
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@use "@picocss/pico/scss/pico" with (
+    $semantic-root-element: 'body div:first-child',
+    $enable-semantic-container: true,
+    $enable-viewport: true
+);
 
 :root {
-    --spacing: .2rem;
-    --border-radius: 0;
+    --pico-spacing: .2rem;
+    --pico-border-radius: 0;
 }
